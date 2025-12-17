@@ -1,3 +1,5 @@
+org 100h
+
 mov ax, 0B800h
 mov es, ax
 
@@ -54,7 +56,7 @@ rotate_loop:
 int 20h
 
 delay:
-    mov cx, 0ffff
+    mov cx, 0ffffh
 
 wait_loop:
     dec cx

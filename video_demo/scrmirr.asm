@@ -1,3 +1,5 @@
+org 100h
+
 mov ax, 0B800h
 mov es, ax
 

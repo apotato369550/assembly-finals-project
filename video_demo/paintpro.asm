@@ -1,15 +1,17 @@
+org 100h
+
 mov ax, 0B800h
 mov es, ax
 
 ; Display welcome message
 mov ah, 09h
-mov dx, offset welcome_msg
+mov dx, welcome_msg
 int 21h
 
 paint_loop:
     ; Display prompt
     mov ah, 09h
-    mov dx, offset prompt_msg
+    mov dx, prompt_msg
     int 21h
 
     ; Read X coordinate
@@ -48,7 +50,7 @@ paint_loop:
 
     ; Ask if continue
     mov ah, 09h
-    mov dx, offset continue_msg
+    mov dx, continue_msg
     int 21h
 
     mov ah, 01h

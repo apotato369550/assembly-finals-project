@@ -1,21 +1,23 @@
+org 100h
+
 ; Display "Enter first 5-digit number: $"
 mov ah, 09h
-mov dx, offset msg1
+mov dx, msg1
 int 21h
 
 ; Read first number into array
 mov ah, 0Ah
-mov dx, offset input1_buffer
+mov dx, input1_buffer
 int 21h
 
 ; Display "Enter second 5-digit number: $"
 mov ah, 09h
-mov dx, offset msg2
+mov dx, msg2
 int 21h
 
 ; Read second number into array
 mov ah, 0Ah
-mov dx, offset input2_buffer
+mov dx, input2_buffer
 int 21h
 
 ; Convert and add
@@ -41,7 +43,7 @@ add cx, ax
 
 ; Display result
 mov ah, 09h
-mov dx, offset msg3
+mov dx, msg3
 int 21h
 
 ; Convert sum to ASCII and display
